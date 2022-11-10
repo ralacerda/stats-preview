@@ -1,0 +1,129 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bg: hsl(233, 47%, 7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --primary: hsl(277, 64%, 61%);
+}
+
+body {
+  background-color: var(--bg);
+  font-size: 15px;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 327px;
+  border-radius: 0.5rem;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .card {
+    flex-direction: row;
+    width: 1110px;
+  }
+}
+
+.card-text {
+  background-color: var(--card-bg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .card-text {
+    text-align: left;
+    padding: 4.5rem 0 64px 4.5rem;
+  }
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  max-width: 18ch;
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+
+.emphasis {
+  color: var(--primary);
+}
+
+p {
+  margin-top: 24px;
+  font-family: "Lexend Deca", sans-serif;
+  opacity: 0.75;
+  line-height: 1.7;
+  max-width: 40ch;
+}
+
+.card-stats {
+  margin-top: 48px;
+  display: flex;
+  gap: 32px;
+  line-height: 1.5;
+  flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .card-stats {
+    margin-top: 0;
+    flex-direction: row;
+    gap: 60px;
+  }
+}
+
+.card-stats .number {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.card-stats .label {
+  text-transform: uppercase;
+  opacity: 0.6;
+  font-size: 14px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+picture {
+  background-color: var(--primary);
+}
+
+img {
+  mix-blend-mode: multiply;
+}
+
+footer {
+  position: block;
+
+  text-align: center;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+  footer {
+    position: fixed;
+    bottom: 1.5rem;
+  }
+}
